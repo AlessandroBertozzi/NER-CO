@@ -1,0 +1,7 @@
+.idea
+/data
+/output
+config.cfg
+base_config.cfg
+poetry.lock
+__pycache__

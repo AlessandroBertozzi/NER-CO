@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "ner-cooking"
+version = "0.1.0"
+description = ""
+authors = ["Alessandro Bertozzi <alessandro.bertozzi7@studio.unibo.it>"]
+readme = "README.md"
+packages = [{include = "ner_cooking"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.0.0"
+bs4 = "^0.0.1"
+requests = "^2.28.2"
+tqdm = "^4.65.0"
+lxml = "^4.9.2"
+spacy = {extras = ["cuda"], version = "^3.5.2"}
+gensim = "^4.3.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+ex-cat = "ner_cooking.ex-cat:run"
+ex-rep = "ner_cooking.ex-rep:run"
+ex-rep_info = "ner_cooking.ex-rep_info:run"
+ex-gloss = "ner_cooking.ex-gloss:run"
+create-training_data = "ner_cooking.create-training_data:run"
+create-docBin = "ner_cooking.create-docBin:run"
